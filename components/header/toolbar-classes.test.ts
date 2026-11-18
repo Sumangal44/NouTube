@@ -43,7 +43,7 @@ describe('toolbarPillLabelClass', () => {
 // Char ranges of every `nIf(isWeb, ...)` subtree, i.e. markup that never renders
 // on native.
 const webOnlyRanges = (source: string) => {
-  const ranges: Array<[number, number]> = []
+  const ranges: [number, number][] = []
   for (const match of source.matchAll(/nIf\(\s*isWeb\s*,/g)) {
     const start = match.index + match[0].length
     let depth = 1
